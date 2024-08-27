@@ -37,8 +37,6 @@ def my_callback(channel):
         print("Power OK")
 
 GPIO.add_event_detect(PLD_PIN, GPIO.BOTH, callback=my_callback)
-
 print("UPC Started")
-input("Press Enter to exit\n")
 
 GPIO.cleanup()
