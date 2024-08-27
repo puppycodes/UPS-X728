@@ -17,9 +17,9 @@ def beep_buzzer(duration=5):
     end_time = time.time() + duration
     while time.time() < end_time:
         GPIO.output(BUZZER_PIN, 1)
-        time.sleep(1)
+        time.sleep(2)
         GPIO.output(BUZZER_PIN, 0)
-        time.sleep(1)
+        time.sleep(2)
 
 def shutdown_pi():
     print("bye 4 now...")
@@ -39,4 +39,8 @@ def my_callback(channel):
 GPIO.add_event_detect(PLD_PIN, GPIO.BOTH, callback=my_callback)
 print("UPC Started")
 
-GPIO.cleanup()
+try:
+    while True:
+        time.sleep(1)  # let cpu chill
+except KeyboardInterrupt:
+    GPIO.cleanup()
