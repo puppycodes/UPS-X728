@@ -1,0 +1,14 @@
+[Unit]
+Description=UPS Shutdown Script
+After=multi-user.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3 /usr/local/bin/ups.py
+User=root
+Restart=on-failure
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target
