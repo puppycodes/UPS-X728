@@ -1,3 +1,3 @@
 # UPS-X728
 
-Safe shutdown script for the geekworm X728 raspberry pi UPS
+ power script for the geekworm X728 UPS, raspberry pi 4B running Kali
