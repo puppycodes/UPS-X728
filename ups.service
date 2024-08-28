@@ -1,5 +1,5 @@
 [Unit]
-Description=UPS Shutdown Script
+Description=UPS-X728
 After=multi-user.target
 
 [Service]
